@@ -41,7 +41,7 @@ func ParserHandler(c *gin.Context) {
 }
 
 func init() {
-	amqpConnection, err := amqp.Dial("amqp://guest:password@localhost:5672/")
+	amqpConnection, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -59,5 +59,7 @@ func main() {
 
 /*
 
-docker run -d --name rabbitmq -e RABBITMQ_DEFAUL_USER=user -e RABBITMQ_DEFAULT_PASS=password -p 8080:15672 -p 5672:5672 rabbitmq:3.8.21-management-alpine
+-- Usar o usuário guest e senha guest  --
+docker run -d --name rabbitmq -p 8080:15672 -p 5672:5672 rabbitmq:3-management-alpine
+-- adicionar a queue manualmente rss_urls
 */
