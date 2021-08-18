@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "b61bf30b-153d-4f05-a572-a947adbbafd4",
+		"name": "RabbitMQ com Go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"http://google.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/parse",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"parse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
